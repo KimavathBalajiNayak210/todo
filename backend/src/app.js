@@ -29,6 +29,11 @@ app.use(
   })
 );
 
+// Root Route
+app.get('/', (req, res) => {
+  res.json({ status: 'API is running 🚀', documentation: 'https://github.com/KimavathBalajiNayak210/todo' });
+});
+
 // Health Check Route
 app.get('/health', (req, res) => {
   res.json({ status: 'Backend is running' });
